@@ -1,0 +1,35 @@
+
+body {
+   
+}
+
+h1 {
+ 
+  text-align: center;
+}
+
+p {
+
+}
+
+.search-div {
+  text-align: center;
+}
+
+#book-container {
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 30px 300px 0 300px;
+}
+
+.book-image {
+  height: 250px;
+  width: 200px;
+}
+
+.book-div {
+  width: 200px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
