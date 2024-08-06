@@ -1,6 +1,7 @@
 
 body {
-   
+    font-family: "Edu AU VIC WA NT Hand", cursive;
+    font-style: normal;
 }
 
 h1 {
@@ -32,4 +33,44 @@ p {
   width: 200px;
   margin-right: 30px;
   margin-bottom: 30px;
+}
+
+#error{
+  display:none;
+  text-align: center;
+  color: red;
+}
+
+#loading{
+  text-align: center;
+  display: none;
+  margin-top: 50px;
+}
+
+#submit-btn{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  background-color: black;
+  border: none;
+  padding: 4px 15px 4px 15px; 
+  color: white;
+font-size: 16px;
+margin-right: 10px;
+}
+
+#clear-btn{
+  font-family: "Edu AU VIC WA NT Hand", cursive;
+  background-color: rgb(117, 4, 4);
+  border: none;
+  padding: 4px 15px 4px 15px; 
+  color: white;
+font-size: 16px;
+}
+
+#myInput {
+  height: 30px;
+    border-radius: 3px;
+    padding-left: 5px;
+    font-size: 16px;
+    margin-right: 10px;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
 }

@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
       </head>
 <body>
@@ -9,9 +12,11 @@
 <div class="search-div">
     <p>Enter a title of a book</p>
     <input  id="myInput"/>
-    <button id="submit-btn" onclick="submit()">search</button>
-    <button id="clear-btn" onclick="clearBtn()">clear</button>
+    <button id="submit-btn" onclick="submit()">Search</button>
+    <button id="clear-btn" onclick="clearBtn()">Clear</button>
 </div>
+<p id="error">Kindly put a value</p>
+<p id="loading">Loading...</p>
 <div 
 id="book-container" >
  

@@ -2,16 +2,24 @@
 let booksArray = []
 
 function submit() {
+  const error = document.getElementById("error")
+      error.style.display="none"
     const input = document.getElementById("myInput");
     const inputValue = input.value;
-    console.log(inputValue);
-
-    const apikey="AIzaSyCx71clb4BYk_8sofsdG5SzV1ZFBiGwWTY"
-    fetch("https://www.googleapis.com/books/v1/volumes?key=" + apikey + "&q=intitle:" + inputValue)
-  .then(response => response.json())
-  .then(result => {
+    if (inputValue.trim().length===0){
+      error.style.display="block"
+      return
+    }
     const bookContainer = document.getElementById("book-container")
     bookContainer.innerHTML = null
+    const loading = document.getElementById("loading")
+      loading.style.display="block"
+
+    const apikey="AIzaSyCx71clb4BYk_8sofsdG5SzV1ZFBiGwWTY"
+    fetch("https://www.googleapis.com/books/v1/volumes?key=" + apikey + "&q=intitle:" + inputValue.trim())
+  .then(response => response.json())
+  .then(result => {
+    loading.style.display="none"
     booksArray = result.items
     booksArray.map((book) => {
         const individualBook = document.createElement('div')
@@ -35,7 +43,6 @@ function submit() {
 
 
 function clearBtn() {
-    console.log("TEST")
     const input=document.getElementById('myInput')
     input.value = ''
 
