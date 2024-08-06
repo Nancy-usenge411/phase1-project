@@ -29,7 +29,7 @@ function submit() {
         
         individualBook.className = 'book-div'
         individualBookImage.className = 'book-image'
-        individualBookImage.src = book.volumeInfo.imageLinks.smallThumbnail
+        individualBookImage.src = book.volumeInfo.imageLinks?.smallThumbnail || book.volumeInfo?.previewLink
         individualBookTitle.innerText = book.volumeInfo.title
         individualBookAuthor.innerText = book.volumeInfo.authors[0]
         individualBook.append(individualBookImage)
